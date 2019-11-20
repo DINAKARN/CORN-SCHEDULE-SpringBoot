@@ -6,15 +6,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class Scdule_Corn {
 
+
 	@Scheduled(fixedDelay = 10000)
 	public void test_ScheduleInterval() {
 		System.out.println("This is message is printing every 10 seconds");
 	}
 
-	// Cron sinature is <second> <minute> <hour> <day-of-month> <month>
-	// <day-of-week> <year> <command>
+	// Cron sinature is <second> <minute> <hour> <day-of-month> <month> <day-of-week> <year> <command>
 	@Scheduled(cron = "0 * * ? * *")
 	public void test_ScheduleIntervalWithCron() {
-		System.out.println("This is message is printing every 9 seconds With cron Config");
+		System.out.println("This is message is printing every 1 second With cron Config");
 	}
 }
